@@ -1,4 +1,4 @@
-package de.cmo.cache.domain;
+package de.cmo.cache.domain.geschlecht;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -27,6 +27,7 @@ public class GeschlechtController {
 
     @GetMapping("/returncode/{id}")
     String returncode(@PathVariable Long id) {
+        returncodeService.insert();
         return returncodeService.getReturncode(id).toString();
     }
 }

@@ -18,4 +18,8 @@ public class ReturncodeService {
         }
         return result;
     }
+
+    public void insert() {
+        repository.save(new Returncode("0000001", "NENENNENENENENENE"));
+    }
 }

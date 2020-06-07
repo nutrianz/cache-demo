@@ -3,7 +3,7 @@ package de.cmo.cache.domain.returncode;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ReturncodeService {
+class ReturncodeService {
 
     final ReturncodeRepository repository;
 

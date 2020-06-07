@@ -3,7 +3,7 @@ package de.cmo.cache.domain.geschlecht;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GeschlechtService {
+class GeschlechtService {
 
     final GeschlechtRepository repository;
 

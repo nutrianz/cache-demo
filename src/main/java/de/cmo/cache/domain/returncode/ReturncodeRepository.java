@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface ReturncodeRepository extends CrudRepository<Returncode, Long> {
+interface ReturncodeRepository extends CrudRepository<Returncode, Long> {
 
     @Cacheable("returncodes")
     Returncode findById(long id);

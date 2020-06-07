@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface GeschlechtRepository extends CrudRepository<Geschlecht, Long> {
+interface GeschlechtRepository extends CrudRepository<Geschlecht, Long> {
 
     @Cacheable("geschlechter")
     Geschlecht findById(long id);

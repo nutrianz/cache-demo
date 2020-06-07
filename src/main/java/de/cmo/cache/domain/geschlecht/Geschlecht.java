@@ -13,7 +13,7 @@ import javax.persistence.Id;
 @ToString
 @NoArgsConstructor
 @Entity
-public class Geschlecht {
+class Geschlecht {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

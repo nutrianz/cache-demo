@@ -13,7 +13,7 @@ import javax.persistence.Id;
 @ToString
 @NoArgsConstructor
 @Entity
-public class Returncode {
+class Returncode {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

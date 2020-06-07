@@ -6,11 +6,11 @@ import org.springframework.stereotype.Component;
 
 @Log4j2
 @Component
-class AppRunnerDummyDataGeschlecht implements CommandLineRunner {
+class DummyData implements CommandLineRunner {
 
     final GeschlechtRepository geschlechtRepository;
 
-    public AppRunnerDummyDataGeschlecht(GeschlechtRepository geschlechtRepository) {
+    public DummyData(GeschlechtRepository geschlechtRepository) {
         this.geschlechtRepository = geschlechtRepository;
     }
 

@@ -6,11 +6,11 @@ import org.springframework.stereotype.Component;
 
 @Log4j2
 @Component
-class AppRunnerDummyDataReturncode implements CommandLineRunner {
+class DummyData implements CommandLineRunner {
 
     final ReturncodeRepository returncodeRepository;
 
-    public AppRunnerDummyDataReturncode(ReturncodeRepository returncodeRepository) {
+    public DummyData(ReturncodeRepository returncodeRepository) {
         this.returncodeRepository = returncodeRepository;
     }
 

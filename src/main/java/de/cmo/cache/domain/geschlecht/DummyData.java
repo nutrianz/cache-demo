@@ -5,7 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Log4j2
-@Component
+@Component("dummyGeschlecht")
 class DummyData implements CommandLineRunner {
 
     final GeschlechtRepository geschlechtRepository;

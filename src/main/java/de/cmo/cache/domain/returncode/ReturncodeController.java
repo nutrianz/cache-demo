@@ -10,14 +10,18 @@ class ReturncodeController {
 //    final CacheManager cacheManager;
 //    Cache cache = cacheManager.getCache("returncode");
 
-    final ReturncodeService service;
+    final ReturncodeRepository repository;
 
-    public ReturncodeController(ReturncodeService service) {
-        this.service = service;
+    ReturncodeController(ReturncodeRepository repository) {
+        this.repository = repository;
     }
 
     @GetMapping("/returncode/{id}")
     String returncode(@PathVariable Long id) {
-        return service.getReturncode(id).toString();
+        Returncode result = repository.findById(id.longValue());
+        if (result == null) {
+            result = new Returncode();
+        }
+        return result.toString();
     }
 }

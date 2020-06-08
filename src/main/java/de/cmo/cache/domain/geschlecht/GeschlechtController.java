@@ -10,14 +10,18 @@ class GeschlechtController {
 //    final CacheManager cacheManager;
 //    Cache cache = cacheManager.getCache("returncode");
 
-    final GeschlechtService service;
+    final GeschlechtRepository repository;
 
-    public GeschlechtController(GeschlechtService service) {
-        this.service = service;
+    GeschlechtController(GeschlechtRepository repository) {
+        this.repository = repository;
     }
 
     @GetMapping("/geschlecht/{id}")
     String geschlecht(@PathVariable Long id) {
-        return service.getGeschlecht(id).toString();
+        Geschlecht result = repository.findById(id.longValue());
+        if (result == null) {
+            result = new Geschlecht();
+        }
+        return result.toString();
     }
 }

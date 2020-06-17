@@ -16,10 +16,10 @@ class DummyData implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        geschlechtRepository.save(new Geschlecht("w", "weiblich"));
-        geschlechtRepository.save(new Geschlecht("m", "mänlich"));
-        geschlechtRepository.save(new Geschlecht("d", "divers"));
-        geschlechtRepository.save(new Geschlecht("x", "nix"));
+        geschlechtRepository.save(Geschlecht.builder().code("w").bezeichnung("weiblich").build());
+        geschlechtRepository.save(Geschlecht.builder().code("m").bezeichnung("männlich").build());
+        geschlechtRepository.save(Geschlecht.builder().code("d").bezeichnung("divers").build());
+        geschlechtRepository.save(Geschlecht.builder().code("x").bezeichnung("nix").build());
 
         log.info("----------------------------------------------------");
         log.info("Geschlecht: " + geschlechtRepository.findById(1L));

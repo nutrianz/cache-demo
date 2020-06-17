@@ -16,10 +16,11 @@ class DummyData implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        returncodeRepository.save(new Returncode("000001", "Falscher Fehler"));
-        returncodeRepository.save(new Returncode("000002", "Richtiger Fehler"));
-        returncodeRepository.save(new Returncode("000003", "Ganz Falsch"));
-        returncodeRepository.save(new Returncode("000004", "So doch nicht"));
+        ;
+        returncodeRepository.save(Returncode.builder().code("0000001").bezeichnung("Falscher Fehler").build());
+        returncodeRepository.save(Returncode.builder().code("0000002").bezeichnung("Richtiger Fehler").build());
+        returncodeRepository.save(Returncode.builder().code("0000003").bezeichnung("Ganz Falsch").build());
+        returncodeRepository.save(Returncode.builder().code("0000004").bezeichnung("So doch nicht").build());
 
         log.info("----------------------------------------------------");
         log.info("Returncode: " + returncodeRepository.findById(1L));

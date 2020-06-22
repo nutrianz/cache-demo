@@ -7,7 +7,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.List;
 
 @RepositoryRestResource
-interface ReturncodeRepository extends CrudRepository<Returncode, Long> {
+public interface ReturncodeRepository extends CrudRepository<Returncode, Long> {
 
     @Cacheable("returncodes")
     Returncode findById(long id);

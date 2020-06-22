@@ -7,7 +7,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.List;
 
 @RepositoryRestResource(collectionResourceRel = "geschlechter", path = "geschlechter")
-interface GeschlechtRepository extends CrudRepository<Geschlecht, Long> {
+public interface GeschlechtRepository extends CrudRepository<Geschlecht, Long> {
 
     @Cacheable("geschlechter")
     Geschlecht findById(long id);

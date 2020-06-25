@@ -9,6 +9,6 @@ import java.util.List;
 @RepositoryRestResource(collectionResourceRel = "zutaten", path = "zutaten")
 public interface ZutatRepository extends CrudRepository<Zutat, Long> {
 
-    @Cacheable("Zutaten")
+    @Cacheable("zutaten")
     List<Zutat> findAll();
 }

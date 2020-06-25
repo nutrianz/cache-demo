@@ -7,6 +7,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Log4j2
 @Component
@@ -45,6 +46,6 @@ public class AppConfiguration {
 
     @Scheduled(fixedRate = 5000)
     public void reportCurrentTime() {
-        log.info("Time-Scheduler: The time is now {}", LocalDate.now());
+        log.info("Time-Scheduler: The time is now {}", LocalDateTime.now());
     }
 }

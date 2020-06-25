@@ -1,4 +1,5 @@
 # Operating System Files
+*.log
 
 *.DS_Store
 Thumbs.db
